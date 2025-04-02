@@ -15,23 +15,27 @@
 </template>
 
 <script>
-import {
-  LivePlayer,
-  PlayerEvent,
-  setRTCParameter,
-  enableLogUpload,
-  setLogLevel,
-  RtcEvent
-} from "agora-fls-sdk";
+import { LivePlayer } from "agora-fls-sdk";
+// import "vue-virtual-scroller";
+// import * as VueVirtualScroller from "vue-virtual-scroller";
+// import "agora-test";
+// import AgoraRTC from "agora-rtc-sdk-ng";
+
 export default {
   data() {
     return {};
   },
-  mounted() {},
-  methods:{
+  mounted() {
+    this.initAgoraPlayer();
+  },
+  methods: {
     initAgoraPlayer() {
-
-    },
+      console.log("LivePlayer:", LivePlayer);
+      // const player = new LivePlayer({
+      //   url: "您的直播流地址",
+      //   el: "player-container-id"
+      // });
+    }
   }
 };
 </script>
